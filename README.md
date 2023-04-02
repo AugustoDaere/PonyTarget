@@ -1,5 +1,5 @@
 # PonyTarget
-Simple 2d shooter
+Simple 2d shooter made in Unity
 
 this game was made for testing purposes;
 The game is on the .zip;
