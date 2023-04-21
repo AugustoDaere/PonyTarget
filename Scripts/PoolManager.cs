@@ -32,7 +32,7 @@ public class PoolManager : MonoBehaviour
     int targetAmount = 5000;
 
     //UI
-    public Text[] texto = new Text[4];
+    public Text[] texto = new Text[5];
     public GameObject box;
     public GameObject results;
     float acc;
@@ -41,6 +41,8 @@ public class PoolManager : MonoBehaviour
     void Awake()
     {
         SharedInstance = this;
+        box.SetActive(false);
+        results.SetActive(false);
     }
 
     void Start()
@@ -78,7 +80,7 @@ public class PoolManager : MonoBehaviour
 
         //Reset and Quit Game shortcuts
         if(Input.GetKeyUp(KeyCode.R)){
-        SceneManager.LoadSceneAsync("PaprikaGame");
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
         if(Input.GetKeyUp(KeyCode.Escape)){
         Application.Quit();
